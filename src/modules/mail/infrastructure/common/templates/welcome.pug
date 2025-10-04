@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bem-vindo à Biblioteca Virtual</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    .email-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .container {
+      background: #ffffff;
+      padding: 0;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+    }
+    .header-banner {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 40px 30px;
+      text-align: center;
+      color: white;
+    }
+    .header-banner .emoji {
+      font-size: 64px;
+      display: block;
+      margin-bottom: 15px;
+      animation: wave 1s ease-in-out infinite;
+    }
+    @keyframes wave {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(20deg); }
+      75% { transform: rotate(-20deg); }
+    }
+    .header-banner h1 {
+      color: #ffffff;
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .header-banner .subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 16px;
+    }
+    .content {
+      padding: 40px 30px;
+      color: #333;
+      font-size: 16px;
+    }
+    .content p {
+      margin-bottom: 18px;
+      line-height: 1.8;
+    }
+    .welcome-message {
+      background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #27abe9;
+      margin: 25px 0;
+      text-align: center;
+    }
+    .welcome-message p {
+      margin: 0;
+      font-size: 18px;
+      color: #555;
+      font-weight: 500;
+    }
+    .features {
+      display: flex;
+      gap: 15px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    .feature-card {
+      flex: 1;
+      min-width: 150px;
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+    }
+    .feature-card .icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .feature-card h3 {
+      font-size: 16px;
+      color: #27abe9;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 13px;
+      color: #666;
+      margin: 0;
+    }
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      margin: 25px 0;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+    .cta-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+      margin: 35px 0;
+    }
+    .tips {
+      background: #fff9e6;
+      border-left: 4px solid #ffc107;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+    }
+    .tips h3 {
+      color: #f57c00;
+      font-size: 16px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tips ul {
+      margin-left: 20px;
+      color: #666;
+    }
+    .tips li {
+      margin-bottom: 8px;
+    }
+    .footer {
+      background: #f8f9fa;
+      padding: 30px;
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+      border-top: 1px solid #e0e0e0;
+    }
+    .footer p {
+      margin: 8px 0;
+    }
+    .footer strong {
+      color: #333;
+      font-size: 15px;
+    }
+    .footer a {
+      color: #27abe9;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .social-links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #27abe9;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+    .social-links a:hover {
+      color: #667eea;
+    }
+    @media only screen and (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .header-banner {
+        padding: 30px 20px;
+      }
+      .header-banner h1 {
+        font-size: 26px;
+      }
+      .content {
+        padding: 30px 20px;
+      }
+      .features {
+        flex-direction: column;
+      }
+      .feature-card {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="container">
+      <div class="header-banner">
+        <span class="emoji">👋</span>
+        <h1>Bem-vindo, João Silva!</h1>
+        <p class="subtitle">Estamos felizes em ter você conosco</p>
+      </div>
+      
+      <div class="content">
+        <p>Olá <strong>João Silva</strong>,</p>
+        
+        <p>É com grande alegria que damos as boas-vindas à <strong>Biblioteca Virtual</strong>! 🎉</p>
+        
+        <div class="welcome-message">
+          <p>Obrigado por se cadastrar em nossa plataforma! 🚀</p>
+        </div>
+        
+        <p>Agora você tem acesso ilimitado a milhares de livros digitais, audiobooks e muito mais. Explore nosso acervo e aproveite o melhor da literatura mundial.</p>
+        
+        <div class="features">
+          <div class="feature-card">
+            <span class="icon">📚</span>
+            <h3>Acervo Completo</h3>
+            <p>Milhares de títulos disponíveis</p>
+          </div>
+          <div class="feature-card">
+            <span class="icon">🎧</span>
+            <h3>Audiobooks</h3>
+            <p>Ouça seus livros favoritos</p>
+          </div>
+          <div class="feature-card">
+            <span class="icon">⭐</span>
+            <h3>Recomendações</h3>
+            <p>Sugestões personalizadas</p>
+          </div>
+        </div>
+        
+        <div class="tips">
+          <h3>💡 Dicas para começar:</h3>
+          <ul>
+            <li>Explore nossas categorias e descubra novos gêneros</li>
+            <li>Crie listas de leitura personalizadas</li>
+            <li>Compartilhe suas avaliações com a comunidade</li>
+            <li>Configure notificações para novos lançamentos</li>
+          </ul>
+        </div>
+        
+        <div class="cta-container">
+          <a href="#" class="cta-button">Explorar Biblioteca Agora</a>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <p style="text-align: center; color: #666;">
+          Caso tenha alguma dúvida, nossa equipe de suporte está sempre pronta para ajudar!
+        </p>
+      </div>
+      
+      <div class="footer">
+        <p><strong>Biblioteca Virtual</strong></p>
+        <p>Sua plataforma de leitura digital</p>
+        <p>© 2025 Todos os direitos reservados</p>
+        <p>📧 <a href="mailto:contato@biblioteca.com">contato@biblioteca.com</a> | 📞 (11) 9999-9999</p>
+        
+        <div class="social-links">
+          <a href="#">📘 Facebook</a>
+          <a href="#">📸 Instagram</a>
+          <a href="#">🐦 Twitter</a>
+          <a href="#">💼 LinkedIn</a>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 11px;">
+          Você está recebendo este email porque se cadastrou em nossa plataforma.<br>
+          <a href="#">Gerenciar preferências</a> | <a href="#">Cancelar inscrição</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

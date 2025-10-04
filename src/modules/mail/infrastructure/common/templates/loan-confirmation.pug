@@ -1,0 +1,185 @@
+doctype html
+html(lang='pt-BR')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title Empréstimo Confirmado
+    style.
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        margin: 0;
+        padding: 40px 20px;
+        line-height: 1.6;
+      }
+      .email-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .container {
+        background: #ffffff;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #f0f0f0;
+      }
+      .header h1 {
+        color: #27abe9;
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      .header .emoji {
+        font-size: 48px;
+        display: block;
+        margin-bottom: 15px;
+      }
+      .content {
+        color: #333;
+        font-size: 16px;
+      }
+      .content p {
+        margin-bottom: 15px;
+      }
+      .greeting {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      .book-info {
+        background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #27abe9;
+        margin: 25px 0;
+      }
+      .book-info strong {
+        color: #27abe9;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: block;
+        margin-bottom: 8px;
+      }
+      .book-title {
+        font-size: 20px;
+        color: #333;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+      .message {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        margin: 20px 0;
+        color: #666;
+      }
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #ffffff;
+        text-decoration: none;
+        padding: 14px 32px;
+        border-radius: 6px;
+        font-weight: 600;
+        margin: 20px 0;
+        text-align: center;
+        transition: transform 0.2s ease;
+      }
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+      .divider {
+        height: 1px;
+        background: #e0e0e0;
+        margin: 30px 0;
+      }
+      .footer {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e0e0;
+        text-align: center;
+        color: #999;
+        font-size: 13px;
+      }
+      .footer p {
+        margin: 5px 0;
+      }
+      .footer a {
+        color: #27abe9;
+        text-decoration: none;
+      }
+      .social-links {
+        margin-top: 15px;
+      }
+      .social-links a {
+        display: inline-block;
+        margin: 0 8px;
+        color: #27abe9;
+        text-decoration: none;
+        font-size: 12px;
+      }
+      @media only screen and (max-width: 600px) {
+        body {
+          padding: 20px 10px;
+        }
+        .container {
+          padding: 25px 20px;
+        }
+        .header h1 {
+          font-size: 24px;
+        }
+        .book-title {
+          font-size: 18px;
+        }
+      }
+  body
+    .email-wrapper
+      .container
+        .header
+          span.emoji 📚
+          h1 Empréstimo Confirmado!
+        
+        .content
+          p.greeting Olá! Temos ótimas notícias! 🎉
+          
+          p Seu empréstimo foi registrado com sucesso em nosso sistema.
+          
+          .book-info
+            strong 📖 Livro Emprestado:
+            .book-title #{bookTitle}
+          
+          .message
+            | Boa leitura! Esperamos que você aproveite cada página. 🚀
+          
+          p Lembre-se de devolver o livro dentro do prazo estabelecido para evitar multas.
+          
+          .divider
+          
+          p 
+            | Caso tenha alguma dúvida ou precise de ajuda, nossa equipe está à disposição.
+        
+        .footer
+          p 
+            strong Biblioteca Virtual
+          p © #{new Date().getFullYear()} Todos os direitos reservados
+          p 
+            | 📧 contato@biblioteca.com | 📞 (00) 0000-0000
+          .social-links
+            a(href='#') Facebook
+            span |
+            a(href='#') Instagram
+            span |
+            a(href='#') Twitter
