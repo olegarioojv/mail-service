@@ -104,44 +104,6 @@ npx ts-node ./node_modules/typeorm/cli.js migration:run -d ./src/data-source.ts
 npm run start:dev
 ```
 
----
-
-## 📮 Testar API
-
-Importe a collection do Postman: `Biblioteca Service.postman_collection.json`
-
-**Exemplos:**
-
-```bash
-# Criar usuário
-POST http://localhost:3000/users
-{
-  "name": "João Silva",
-  "email": "joao@example.com",
-  "department": "TI"
-}
-
-# Criar livro
-POST http://localhost:3000/books
-{
-  "title": "Clean Code",
-  "author": "Robert Martin",
-  "isbn": "123456789",
-  "quantity": 5
-}
-
-# Criar empréstimo
-POST http://localhost:3000/loans
-{
-  "userId": 1,
-  "bookId": 1,
-  "loanDate": "2025-10-03",
-  "returnDate": "2025-10-17"
-}
-```
-
----
-
 ## 🔄 Como funciona
 
 1. Cliente faz requisição → Biblioteca Service
